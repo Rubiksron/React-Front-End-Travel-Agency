@@ -44,7 +44,7 @@ module.exports = {
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
-		path: path.join('./docs', 'public'),
+		path: path.join('./dev'),
 		filename: 'bundle.js'
 	},
 	resolve: {
