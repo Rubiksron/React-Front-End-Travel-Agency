@@ -1,0 +1,117 @@
+$grey: #CDCDCD;
+$backGroundComp: #F6F6F6;
+$orange: #FD5001;
+
+
+.QuickBookingViewComponent {
+	height: 318px;
+	width: 300px;
+	background-color: $backGroundComp;
+}
+
+.QuickBookingViewComponent header {
+	width: 50%;
+	height: 44px;
+	background-color: black;
+	color: $backGroundComp;
+}
+
+.QuickBookingViewComponent label {
+	font-size: 14px;
+}
+
+.QuickBookingViewDates input {
+	height: 30px;
+	width: 85%;
+	font-size: 12px;
+}
+
+.QuickBookingViewComponent footer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	box-shadow: 0px 0px 2px 0px $grey;
+}
+h5 {
+	text-align: center;
+	font-size: 12px;
+	padding-top: 14px;
+}
+
+.QuickBookingViewComponent footer a {
+	width: 100%;
+	color: white;
+	padding: 17px;
+	text-align: center;
+	background-color: $orange;
+	height: 54px;
+	font-size: 12px;
+}
+
+.QuickBookingViewMain {
+	border-top: 6px solid black;
+}
+
+.QuickBookingViewComponent {
+	height: 312px;
+	padding-top: 5px;
+	display: inline-block;
+	margin: 20px;
+	box-shadow: 0px 1px 4px 1px $grey;
+}
+
+.widgetFlexBox {
+	display: flex;
+	flex-direction: row;
+}
+.checkInCheckOutContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.guestTotalFlexBox {
+	display: flex;
+	flex-direction: row;
+	margin: 2px;
+	margin-bottom: 34px;
+	margin-top: 20px
+}
+
+.guestTotalComponent {
+	display: flex;
+	flex-direction: column;
+	margin: 8px;
+}
+
+.QuickBookingPriceText {
+	color: $orange;
+	font-size: 15px;
+	display: flex;
+	flex-direction: row;
+}
+
+.QuickBookingStartingPrice {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.QuickBookingSubHeading {
+	font-size: 10px;
+	display: flex;
+	justify-content: space-around;
+	color: $grey;
+}
+
+.QuickBookingCheckTimes {
+	color: $grey;
+}
+
+.QuickBookingFromText {
+	display: flex;
+	flex-direction: row;
+	font-size: 15px;
+	justify-content: space-around;
+	padding-top: 5px;
+}
