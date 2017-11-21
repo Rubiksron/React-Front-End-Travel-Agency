@@ -1,4 +1,7 @@
 ### To run
-npm run start
+
+npm install
+
+npm run watch
 
 Open the web browser to `http://localhost:8888/`
