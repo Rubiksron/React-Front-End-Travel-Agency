@@ -1,5 +1,5 @@
 // @flow
-
+//THIS COULD/SHOULD BE BROKEN INTO SEPARATES COMPONENTS/FILES
 const Immutable = require('immutable')
 import React from 'react';
 import type { Hotel } from './Model';
@@ -8,14 +8,15 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
 module.exports = class QuickBookingView extends React.Component {
-  state = {
-    checkIn: 'string',
-    checkOut: 'string',
-    adults: 'number',
-    children: 'number',
-    infants: 'number',
-    childrenAges: 'number',
-  }
+
+  // state = {
+  //   checkIn: 'string',
+  //   checkOut: 'string',
+  //   adults: 'number',
+  //   children: 'number',
+  //   infants: 'number',
+  //   childrenAges: 'number',
+  // }
 
   constructor(props) {
     super(props)
@@ -39,35 +40,44 @@ module.exports = class QuickBookingView extends React.Component {
 
   adultCountHandleChange(event) {
     this.setState({adults: event.target.value})
-    console.log('this.state - from adultCountHandleChange', this.state);
+    console.log('this.state - from adultCountHandleChange: ', this.state);
   }
 
   childrenCountHandleChange(event) {
     this.setState({children: event.target.value})
-    console.log('this.state - from childrenCountHandleChange', this.state);
+    console.log('this.state - from childrenCountHandleChange: ', this.state);
   }
 
   checkOutHandleChange(event) {
     this.setState({checkOut: event.target.value});
-    console.log('this.state - from checkOutHandleChange:', this.state);
+    console.log('this.state - from checkOutHandleChange: ', this.state);
   }
 
  checkInHandleChange(event) {
     this.setState({checkIn: event.target.value});
-    console.log('this.state - from checkInHandleChange:', this.state);
+    console.log('this.state - from checkInHandleChange: ', this.state);
   }
 
   handleChange(event) {
     this.setState({value: event.target.value});
-    console.log('this.state - from handleChange:', this.state);
+    console.log('this.state - from handleChange: ', this.state);
   }
 
   handleSubmit(event) {
     alert('a value was submitted' + this.state.value)
     event.preventDefault();
-    console.log('this.state - from handleSubmit', this.state);
+    console.log('this.state - from handleSubmit: ', this.state);
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    //THE BELOW CONCATENATES THE STATE PROPS INTO THE URL AS AN API TO THE BACK END.
     // window.location = {`url?checkIn=${ this.state.checkIn }&checkOut=${ this.state.checkOut }&adults=${ this.state.adults }&children=${ this.state.children }`}
-  }s
+    //THE LINE BELOW IS THE API TO THE MAIN SITE, FROM THE WIDGET THAT IS PROVIDING THE REQUIRED PARAMETERS.
+    // {bookLink}?checkIn=X&checkOut=X&adults=X&children=X&infants=X
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  }
+
+
+
 
   render() {
     return(
@@ -138,6 +148,7 @@ module.exports = class QuickBookingView extends React.Component {
     );
   }
 }
+
 
 /*
 
